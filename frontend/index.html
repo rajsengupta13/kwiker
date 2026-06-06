@@ -1,0 +1,1313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Kwikar — Coming Soon to India 26 May 2026</title>
+
+<!-- PWA Meta -->
+<meta name="application-name" content="Kwikar">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Kwikar">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#0d1b3e" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#060e20" media="(prefers-color-scheme: dark)">
+<meta name="msapplication-TileColor" content="#0d1b3e">
+<meta name="msapplication-TileImage" content="images/icons/icon-144.png">
+
+<!-- SEO -->
+<meta name="description" content="Kwikar is coming to India on 26 May 2026! Book verified home appliance repair at your doorstep. AC, Fridge, Washing Machine, TV, RO & more.">
+<meta name="keywords" content="appliance repair India, AC repair, washing machine repair, Kwikar Bihar">
+<meta property="og:title" content="Kwikar — Coming Soon to India">
+<meta property="og:description" content="Book verified home appliance repair at your doorstep. Launching 26 May 2026!">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Icons -->
+<link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16.png">
+<link rel="apple-touch-icon" href="images/icons/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="152x152" href="images/icons/icon-152.png">
+<link rel="apple-touch-icon" sizes="192x192" href="images/icons/icon-192.png">
+
+<!-- Manifest -->
+<link rel="manifest" href="manifest.json">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet"></noscript>
+
+<link rel="stylesheet" href="style.css?v=20260602b">
+</head>
+<body>
+
+<!-- ══ PWA INSTALL BAR ══ -->
+<div id="pwa-install-bar">
+  <div class="pwa-bar-icon"><img src="images/icons/icon-192.png" alt="Kwikar"></div>
+  <div class="pwa-bar-text">
+    <div class="pbt1">Install Kwikar App</div>
+    <div class="pbt2">Add to Home Screen for the best experience</div>
+  </div>
+  <div class="pwa-bar-btns">
+    <button class="pba-install" id="pwa-install-btn">Install</button>
+    <button class="pba-close" id="pwa-dismiss-btn">✕</button>
+  </div>
+</div>
+
+<!-- ══ ABD REFERRAL — Role Choice ══ -->
+<div class="abdr-overlay" id="abdRefChoiceOverlay" style="display:none">
+  <div class="login-box" style="max-width:380px">
+    <div class="login-header">
+      <div class="login-header-logo">K<em>wikar</em></div>
+      <div class="login-header-sub">YOU'VE BEEN INVITED</div>
+    </div>
+    <div class="login-body">
+      <div class="login-title">Pehle batao ki aap kaise use karenge Kwikar</div>
+      <div style="height:14px"></div>
+      <div class="login-role-cards">
+        <button type="button" class="login-role-card" onclick="abdChooseRole('customer')">
+          <div class="lrc-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+          </div>
+          <div class="lrc-text">
+            <div class="lrc-label">Customer</div>
+            <div class="lrc-sub">Service book karna chahta hun</div>
+          </div>
+          <svg class="lrc-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </button>
+        <button type="button" class="login-role-card" onclick="abdChooseRole('tech')">
+          <div class="lrc-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
+          </div>
+          <div class="lrc-text">
+            <div class="lrc-label">Technician</div>
+            <div class="lrc-sub">Kaam dhundhna chahta hun</div>
+          </div>
+          <svg class="lrc-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ Registration Success Popup (shown after any registration) ══ -->
+<div class="abdr-overlay" id="abdRegSuccessOverlay" style="display:none;z-index:9999">
+  <div class="abdr-panel abdr-success-panel">
+    <div class="abdr-success-icon">🎉</div>
+    <div class="abdr-success-title">Registration Successful!</div>
+    <div class="abdr-success-msg">
+      Aap <strong>Kwikar Family</strong> ka hissa ban gaye — Welcome! 🙌<br><br>
+      Hum <strong>26 May 2026</strong> ko launch kar rahe hain. Jab aapke area mein service available hogi, aapko <strong>sabse pehle notify</strong> karenge!
+    </div>
+    <button type="button" class="abdr-btn" onclick="abdRegSuccessClose()">Site par Jaao →</button>
+    <p class="abdr-note" style="margin-top:12px">Kwikar — India ka bharosemand home repair platform</p>
+  </div>
+</div>
+
+<!-- ══ UPDATE TOAST ══ -->
+<div id="pwa-update-toast">
+  <div class="put-text">🔄 New version available!</div>
+  <button class="put-btn" onclick="updateSW()">Update Now</button>
+</div>
+
+<!-- ══ WELCOME MODAL — first-visit pincode capture ══ -->
+<div class="welcome-modal" id="welcomeModal" role="dialog" aria-modal="true" aria-labelledby="welcomeTitle">
+  <div class="welcome-panel">
+    <div class="welcome-form-state show" id="welcomeFormState">
+      <div class="welcome-icon">📍</div>
+      <h2 id="welcomeTitle">Kwikar Mein Aapka Swagat Hai!</h2>
+      <p>Apna pincode daalo taaki hum aapke area ke liye sahi service options dikha sakein.</p>
+      <input type="tel" class="welcome-input" id="welcomePincode" placeholder="6-digit Pincode" maxlength="6" inputmode="numeric" autocomplete="postal-code">
+      <div class="welcome-error" id="welcomeError"></div>
+      <button type="button" class="welcome-btn" id="welcomeSubmit">Continue to site →</button>
+      <button type="button" class="welcome-skip" id="welcomeSkip">Skip Now</button>
+    </div>
+    <div class="welcome-success-state" id="welcomeSuccessState">
+      <div class="wauth-header">
+        <div class="wauth-title">Aapka Swagat Hai!</div>
+        <div class="wauth-sub">Login ya Register karo — shuru karo</div>
+      </div>
+      <!-- Cards -->
+      <div class="wauth-cards">
+        <button type="button" class="wauth-card" id="welcomeLoginBtn">
+          <div class="wauth-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="color:inherit"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+          </div>
+          <div class="wauth-card-text">
+            <div class="wauth-card-label">Login Karo</div>
+          </div>
+          <div class="wauth-check">✓</div>
+        </button>
+      </div>
+      <button type="button" class="welcome-skip" id="welcomeContinue" style="margin-top:16px">Skip for now →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══ MOBILE BOTTOM NAV ══ -->
+<nav class="mob-bottom-nav" id="mobBottomNav">
+  <a href="#" class="mbn-item active" id="mbnHome">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg>
+    <span>Home</span>
+  </a>
+  <a href="#services" class="mbn-item">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93A10 10 0 1 0 4.93 19.07"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2"/></svg>
+    <span>Services</span>
+  </a>
+  <!-- CENTER: Bookings with badge -->
+  <button type="button" class="mbn-center" onclick="openBookingsSheet()" aria-label="My Bookings" style="position:relative">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+    <span id="bookingBadge" style="display:none;position:absolute;top:-4px;right:-4px;background:#ef4444;color:#fff;font-size:.55rem;font-weight:800;min-width:18px;height:18px;border-radius:50%;display:none;align-items:center;justify-content:center;border:2px solid #fff"></span>
+  </button>
+  <a href="#" class="mbn-item" onclick="openSearch()">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    <span>Search</span>
+  </a>
+  <a href="#" class="mbn-item" onclick="openProfModal()">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+    <span>Profile</span>
+  </a>
+</nav>
+
+<!-- ══ TECH SIGNUP MODAL ══ -->
+<div class="ts-overlay" id="tsOverlay" onclick="if(event.target===this)closeTechSignup()">
+  <div class="ts-box">
+    <button type="button" class="ts-close" onclick="closeTechSignup()">✕</button>
+    <div class="ts-progress"><div class="ts-prog-dot active" id="tsp1"></div><div class="ts-prog-dot" id="tsp2"></div><div class="ts-prog-dot" id="tsp3"></div><div class="ts-prog-dot" id="tsp4"></div><div class="ts-prog-dot" id="tsp5"></div><div class="ts-prog-dot" id="tsp6"></div></div>
+    <!-- Step 1 -->
+    <div class="ts-step active" id="tsStep1">
+      <div class="ts-h">Apna Parichay Do</div><div class="ts-sub">Naam, number aur email daalo</div>
+      <input type="text" class="ts-input" id="tsName" placeholder="Poora Naam *">
+      <input type="tel" class="ts-input" id="tsPhone" placeholder="Mobile Number *" maxlength="10" inputmode="numeric">
+      <input type="email" class="ts-input" id="tsEmail" placeholder="Email Address *">
+      <div class="ts-err" id="tsErr1"></div>
+      <div class="ts-nav-row">
+        <button type="button" class="ts-back-btn" onclick="closeTechSignup()">← Back</button>
+        <button type="button" class="ts-btn" onclick="tsNext(1)">Continue →</button>
+      </div>
+    </div>
+    <!-- Step 2: Services -->
+    <div class="ts-step" id="tsStep2">
+      <div class="ts-h">Aap Kya Fix Karte Ho?</div><div class="ts-sub">Jo bhi service karte ho wo select karo</div>
+      <div class="ts-pills" id="tsServicePills">
+        <span class="ts-pill" data-val="AC Repair">❄️ AC Repair</span>
+        <span class="ts-pill" data-val="Refrigerator">🧊 Refrigerator</span>
+        <span class="ts-pill" data-val="Washing Machine">🫧 Washing Machine</span>
+        <span class="ts-pill" data-val="TV Repair">📺 TV Repair</span>
+        <span class="ts-pill" data-val="RO Purifier">💧 RO Purifier</span>
+        <span class="ts-pill" data-val="Geyser">🚿 Geyser</span>
+        <span class="ts-pill" data-val="Microwave">🍳 Microwave</span>
+        <span class="ts-pill" data-val="Chimney">🌬️ Chimney</span>
+        <span class="ts-pill" data-val="Air Cooler">💨 Air Cooler</span>
+        <span class="ts-pill" data-val="Other">🔧 Other</span>
+      </div>
+      <div class="ts-err" id="tsErr2"></div>
+      <div class="ts-nav-row">
+        <button type="button" class="ts-back-btn" onclick="tsBack(2)">← Back</button>
+        <button type="button" class="ts-btn" onclick="tsNext(2)">Continue →</button>
+      </div>
+    </div>
+    <!-- Step 3: Pincodes -->
+    <div class="ts-step" id="tsStep3">
+      <div class="ts-h">Service Area</div><div class="ts-sub">Kin pincodes par kaam karna chahte ho? (Max 4)</div>
+      <div class="ts-pin-row">
+        <input type="tel" class="ts-pin-input" id="tsPinInput" placeholder="6-digit Pincode" maxlength="6" inputmode="numeric" onkeydown="if(event.key==='Enter')addTsPin()">
+        <button type="button" class="ts-pin-add" onclick="addTsPin()">+ Add</button>
+      </div>
+      <div class="ts-pin-tags" id="tsPinTags" style="margin-bottom:4px"></div>
+      <div class="ts-err" id="tsErr3" style="margin-bottom:10px"></div>
+      <!-- ABD referral pincodes — only shown when technician comes via ABD link/QR -->
+      <div id="abdRefPincodes" style="display:none;padding:12px 14px;background:#f8fafc;border-radius:12px;border:1px solid #e2e8f0;margin-bottom:14px"></div>
+      <div class="ts-nav-row">
+        <button type="button" class="ts-back-btn" onclick="tsBack(3)">← Back</button>
+        <button type="button" class="ts-btn" onclick="tsNext(3)">Continue →</button>
+      </div>
+    </div>
+    <!-- Step 4: Experience -->
+    <div class="ts-step" id="tsStep4">
+      <div class="ts-h">Kitne Saal Ka Experience?</div><div class="ts-sub">Apna experience select karo</div>
+      <div class="ts-pills" id="tsExpPills">
+        <span class="ts-pill" data-val="0-1 year">0 – 1 Saal</span>
+        <span class="ts-pill" data-val="1-2 years">1 – 2 Saal</span>
+        <span class="ts-pill" data-val="2+ years">2+ Saal</span>
+      </div>
+      <div class="ts-err" id="tsErr4"></div>
+      <div class="ts-nav-row">
+        <button type="button" class="ts-back-btn" onclick="tsBack(4)">← Back</button>
+        <button type="button" class="ts-btn" onclick="tsNext(4)">Continue →</button>
+      </div>
+    </div>
+    <!-- Step 5: Photo -->
+    <div class="ts-step" id="tsStep5">
+      <div class="ts-h">Profile Photo</div><div class="ts-sub">Customers aapko pehchaan sakein</div>
+      <input type="file" id="tsPhotoInput" accept="image/*" style="display:none" onchange="previewTsPhoto(this)">
+      <div class="ts-upload-area" onclick="document.getElementById('tsPhotoInput').click()">
+        <img id="tsPhotoPreview" class="ts-upload-preview" src="" alt="" style="display:none">
+        <div id="tsUploadPlaceholder"><div class="ts-upload-icon">📷</div><div class="ts-upload-text">Photo upload karo<br><small>Desktop / Gallery se choose karo</small></div></div>
+      </div>
+      <div class="ts-nav-row">
+        <button type="button" class="ts-back-btn" onclick="tsBack(5)">← Back</button>
+        <button type="button" class="ts-btn" onclick="tsNext(5)">Continue →</button>
+      </div>
+      <span class="ts-skip" onclick="tsNext(5)">Skip photo</span>
+    </div>
+    <!-- Step 6: Generate Login PIN -->
+    <div class="ts-step" id="tsStep6">
+      <div class="ts-h">🔐 Apna Login PIN Banao</div>
+      <div class="ts-sub">6-digit PIN set karo — agli baar phone number aur is PIN se login karoge. Account safe rahega.</div>
+      <input type="tel" class="ts-input" id="tsPin" placeholder="6-digit PIN banao" maxlength="6" inputmode="numeric" autocomplete="new-password">
+      <input type="tel" class="ts-input" id="tsPinConfirm" placeholder="PIN dobara daalo" maxlength="6" inputmode="numeric" autocomplete="new-password">
+      <div class="ts-err" id="tsErr6"></div>
+      <div class="ts-nav-row">
+        <button type="button" class="ts-back-btn" onclick="tsBack(6)">← Back</button>
+        <button type="button" class="ts-btn" onclick="submitTechSignup()">Submit 🚀</button>
+      </div>
+    </div>
+    <!-- Success -->
+    <div class="ts-step" id="tsStepDone">
+      <div style="text-align:center;padding:20px 0">
+        <div style="font-size:3rem;margin-bottom:12px">🎉</div>
+        <div class="ts-h" style="text-align:center">Application Submitted!</div>
+        <p style="font-size:.82rem;color:#64748b;margin-top:8px;line-height:1.6">Our team will review your profile within 48 hours and get in touch. Welcome to the Kwikar family!</p>
+        <button type="button" class="ts-btn" style="margin-top:20px" onclick="closeTechSignup();showAbdRegSuccess()">Got it ✓</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ PUSH NOTIFICATION PROMPT ══ -->
+<div id="push-prompt">
+  <div class="pp-header">
+    <div class="pp-icon"><img src="images/icons/icon-192.png" alt="K"></div>
+    <div class="pp-title">🔔 Launch Alerts Lo</div>
+  </div>
+  <p class="pp-sub">Kwikar ko allow karo notify karne ke liye jab hum India mein launch karein. Aap pehle exclusive offers paoge!</p>
+  <div class="pp-btns">
+    <button class="pp-allow" onclick="enablePush()">Notifications Allow Karo</button>
+    <button class="pp-deny" onclick="document.getElementById('push-prompt').classList.remove('show')">Baad Mein</button>
+  </div>
+</div>
+
+<!-- ══ OFFLINE BAR ══ -->
+<div id="offline-bar">📡 You are offline — Some content may not load</div>
+
+<!-- ══ NAV ══ -->
+<nav class="nav" id="mainNav">
+  <a class="nav-logo" href="#">Kw<em>i</em>kar</a>
+  <ul class="nav-links">
+    <li><a href="#countdown">Launch Kab Hai</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#technician">Tech Bano</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="../technician/frontend/index.html" id="techPanelNavBtn" style="display:none;background:linear-gradient(135deg,#16a34a,#15803d);color:#fff;border:none;outline:none;padding:9px 18px;border-radius:50px;font-family:inherit;font-weight:700;font-size:.82rem;cursor:pointer;transition:all .25s;box-shadow:0 4px 14px rgba(21,128,61,.35);line-height:1;align-items:center;gap:5px;text-decoration:none;">🔧 Technician Panel</a>
+    <a href="../abd/frontend/index.html" id="abdPanelNavBtn" style="display:none;background:linear-gradient(135deg,#ff5a1f,#ff8c00);color:#fff;border:none;outline:none;padding:9px 18px;border-radius:50px;font-family:inherit;font-weight:700;font-size:.82rem;cursor:pointer;transition:all .25s;box-shadow:0 4px 14px rgba(255,90,31,.35);line-height:1;align-items:center;gap:5px;text-decoration:none;">⚡ ABD Panel</a>
+    <button type="button" id="navLoginBtn" onclick="openLoginModal()">Login</button>
+    <div class="nav-user-info" id="navUserInfo" style="display:none;align-items:center;gap:8px;cursor:pointer;background:#fff;border:1.5px solid rgba(13,27,62,.15);border-radius:20px;padding:4px 12px 4px 6px" onclick="openProfModal()">
+      <div style="width:26px;height:26px;border-radius:50%;background:#0d1b3e;display:flex;align-items:center;justify-content:center;flex-shrink:0">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" fill="#fff"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" fill="#fff"/></svg>
+      </div>
+      <div style="flex:1;overflow:hidden;position:relative;height:100%;display:flex;align-items:center"><span id="navGreetText" style="font-size:.75rem;font-weight:700;color:#0d1b3e;white-space:nowrap;position:absolute"></span></div>
+    </div>
+    <a href="#technician" class="btn btn-primary">Technician Bano</a>
+    <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ══ MOBILE TOP BAR (phones only) ══ -->
+<div class="mobile-topbar" id="mobileTopbar">
+  <div class="mtb-row1">
+    <a href="#" class="mtb-logo">Kw<em>i</em>kar.in</a>
+    <div class="mtb-actions">
+      <button type="button" class="mtb-join" id="loginBtn" onclick="openLoginModal()">Login</button>
+      <div class="mtb-user-info" id="mtbUserInfo" style="display:none;align-items:center;gap:5px" onclick="openProfModal()">
+        <div class="mtb-avatar">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" fill="#0d1b3e"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" fill="#0d1b3e"/></svg>
+        </div>
+        <div class="mtb-greet-wrap"><span class="mtb-greet-text" id="mtbGreetText"></span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ ABD SIGNUP MODAL ══ -->
+<div class="ts-overlay" id="abdSignupOverlay" onclick="if(event.target===this)closeAbdSignup()">
+  <div class="ts-box">
+    <button type="button" class="ts-close" onclick="closeAbdSignup()">✕</button>
+    <div class="ts-progress">
+      <div class="ts-prog-dot active" id="abdp1"></div>
+      <div class="ts-prog-dot" id="abdp2"></div>
+      <div class="ts-prog-dot" id="abdp3"></div>
+      <div class="ts-prog-dot" id="abdp4"></div>
+    </div>
+
+    <!-- Step 1: Basic Info -->
+    <div class="ts-step abd-step active" id="abdStep1">
+      <div class="ts-h">ABD Registration</div>
+      <div class="ts-sub">Naam, number, email aur area daalo</div>
+      <input type="text" class="ts-input" id="abdName" placeholder="Poora Naam *" maxlength="80">
+      <input type="tel" class="ts-input" id="abdPhone" placeholder="Mobile Number *" maxlength="10" inputmode="numeric">
+      <input type="email" class="ts-input" id="abdEmail" placeholder="Email Address *">
+      <input type="text" class="ts-input" id="abdArea" placeholder="Area / City *" maxlength="100">
+      <div class="ts-err" id="abdErr1"></div>
+      <div class="ts-nav-row">
+        <button type="button" class="ts-back-btn" onclick="closeAbdSignup()">← Back</button>
+        <button type="button" class="ts-btn" onclick="abdNext(1)">Continue →</button>
+      </div>
+    </div>
+
+    <!-- Step 2: Pincodes (up to 10) -->
+    <div class="ts-step abd-step" id="abdStep2">
+      <div class="ts-h">Service Pincodes</div>
+      <div class="ts-sub">Kin pincodes par kaam karenge? <strong>(Max 10)</strong></div>
+      <div class="ts-pin-row">
+        <input type="tel" class="ts-pin-input" id="abdPinInput" placeholder="6-digit Pincode" maxlength="6" inputmode="numeric" onkeydown="if(event.key==='Enter'){event.preventDefault();addAbdPin();}">
+        <button type="button" class="ts-pin-add" onclick="addAbdPin()">+ Add</button>
+      </div>
+      <div class="ts-pin-tags" id="abdPinTags"></div>
+      <div class="ts-err" id="abdErr2"></div>
+      <div class="ts-nav-row">
+        <button type="button" class="ts-back-btn" onclick="abdBack(2)">← Back</button>
+        <button type="button" class="ts-btn" onclick="abdNext(2)">Continue →</button>
+      </div>
+    </div>
+
+    <!-- Step 3: Experience -->
+    <div class="ts-step abd-step" id="abdStep3">
+      <div class="ts-h">Management Experience</div>
+      <div class="ts-sub">Apna experience select karo</div>
+      <div class="ts-pills" id="abdExpPills">
+        <span class="ts-pill" data-val="0-1 year">0 – 1 Saal</span>
+        <span class="ts-pill" data-val="1-3 years">1 – 3 Saal</span>
+        <span class="ts-pill" data-val="3-5 years">3 – 5 Saal</span>
+        <span class="ts-pill" data-val="5+ years">5+ Saal</span>
+      </div>
+      <div class="ts-err" id="abdErr3"></div>
+      <div class="ts-nav-row">
+        <button type="button" class="ts-back-btn" onclick="abdBack(3)">← Back</button>
+        <button type="button" class="ts-btn" onclick="abdNext(3)">Continue →</button>
+      </div>
+    </div>
+
+    <!-- Step 4: PIN -->
+    <div class="ts-step abd-step" id="abdStep4">
+      <div class="ts-h">🔐 Login PIN Banao</div>
+      <div class="ts-sub">6-digit PIN set karo — agli baar is PIN se login karoge</div>
+      <input type="tel" class="ts-input" id="abdLoginPin" placeholder="6-digit PIN banao" maxlength="6" inputmode="numeric" autocomplete="new-password">
+      <input type="tel" class="ts-input" id="abdLoginPinConfirm" placeholder="PIN dobara daalo" maxlength="6" inputmode="numeric" autocomplete="new-password">
+      <div class="ts-err" id="abdErr4"></div>
+      <div class="ts-nav-row">
+        <button type="button" class="ts-back-btn" onclick="abdBack(4)">← Back</button>
+        <button type="button" class="ts-btn" id="abdSubmitBtn" onclick="submitAbdSignup()">Submit 🚀</button>
+      </div>
+    </div>
+
+    <!-- Done -->
+    <div class="ts-step abd-step" id="abdStepDone">
+      <div style="text-align:center;padding:24px 0">
+        <div style="font-size:3rem;margin-bottom:14px">🎉</div>
+        <div class="ts-h" style="text-align:center">ABD Registration Ho Gayi!</div>
+        <p style="font-size:.82rem;color:#64748b;margin-top:10px;line-height:1.6">Aapka ABD account activate ho gaya. Panel mein redirect ho rahe hain…</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ LOGIN MODAL ══ -->
+<div class="login-overlay" id="loginOverlay" onclick="if(event.target===this)closeLoginModal()">
+  <div class="login-box" id="loginBox">
+
+    <button type="button" class="login-close" onclick="closeLoginModal()">✕</button>
+
+    <!-- Scrollable body -->
+    <div class="login-body">
+
+      <!-- View 0: Role selection -->
+      <div id="loginRoleView">
+        <h3 class="login-title">Aap Kaun Hai?</h3>
+        <p class="login-sub">Pehle batao ki aap kaise use karenge Kwikar</p>
+
+        <div class="login-role-cards">
+
+          <!-- Customer card -->
+          <button type="button" class="login-role-card" id="lrcCardUser" onclick="selectRoleCard('user')">
+            <div class="lrc-icon-box">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+              </svg>
+            </div>
+            <div class="lrc-text">
+              <div class="lrc-label">Customer</div>
+              <div class="lrc-sub">Service book karna chahta hun</div>
+            </div>
+            <div class="lrc-check">
+              <svg width="22" height="22" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+          </button>
+
+          <!-- Technician card -->
+          <button type="button" class="login-role-card" id="lrcCardTech" onclick="selectRoleCard('tech')">
+            <div class="lrc-icon-box">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><circle cx="12" cy="12" r="3"/>
+              </svg>
+            </div>
+            <div class="lrc-text">
+              <div class="lrc-label">Technician</div>
+              <div class="lrc-sub">Kaam dhundhna chahta hun</div>
+            </div>
+            <div class="lrc-check">
+              <svg width="22" height="22" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+          </button>
+
+        </div>
+
+        <!-- Continue button (disabled until selection) -->
+        <button type="button" class="lrc-continue" id="lrcContinueBtn" onclick="confirmRoleSelect()">
+          <span id="lrcBtnText">Continue</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+
+      <!-- View 1: Phone login -->
+      <div id="loginPhoneView" style="display:none">
+        <button type="button" class="login-back-btn" onclick="switchToRoleSelect()">‹ Back</button>
+        <h3 class="login-title" id="loginPhoneTitle">Customer Login</h3>
+        <p class="login-sub" id="loginPhoneSub">Apna registered mobile number daalo</p>
+        <div class="login-phone-row">
+          <div class="login-prefix">🇮🇳 +91</div>
+          <input type="tel" id="loginPhoneOnly" class="login-input phone-flex" placeholder="Mobile Number" maxlength="10" inputmode="numeric" onkeydown="if(event.key==='Enter')submitLoginPhone()">
+        </div>
+        <div class="login-error" id="loginPhoneErr"></div>
+        <button type="button" class="login-btn" id="loginContinueBtn" onclick="submitLoginPhone()">Continue →</button>
+        <div class="login-or"><span>Or</span></div>
+        <p class="login-new-row"><span id="loginNewLabel">New Customer?</span> <button type="button" class="login-reg-link" onclick="switchToRegister()">Register Karo</button></p>
+      </div>
+
+      <!-- View Admin: Login -->
+      <div id="loginAdminView" style="display:none">
+        <button type="button" class="login-back-btn" onclick="switchToRoleSelect()">‹ Back</button>
+
+        <!-- Login form only — registration disabled -->
+        <div id="adminLoginForm">
+          <h3 class="login-title" style="margin-top:14px">🛡️ Admin Login</h3>
+          <p class="login-sub">Apna admin email aur PIN daalo</p>
+          <input type="email" id="adminEmail" class="login-input" placeholder="Email Address" autocomplete="email" onkeydown="if(event.key==='Enter')document.getElementById('adminPin').focus()">
+          <input type="tel" id="adminPin" class="login-input" placeholder="4-6 digit PIN" maxlength="6" inputmode="numeric" autocomplete="current-password" onkeydown="if(event.key==='Enter')submitAdminLogin()">
+          <div class="login-error" id="adminLoginErr"></div>
+          <button type="button" class="login-btn lrc-admin-btn" id="adminLoginBtn" onclick="submitAdminLogin()">Login →</button>
+        </div>
+
+        <p style="font-size:11px;color:#94a3b8;text-align:center;margin-top:10px;">Authorized access only · Activity is logged</p>
+      </div>
+
+      <!-- View 1b: PIN entry -->
+      <div id="loginPinView" style="display:none">
+        <button type="button" class="login-back-btn" onclick="backToLoginPhone()">‹ Back</button>
+        <h3 class="login-title">🔐 PIN Daalo</h3>
+        <p class="login-sub" id="loginPinSub">Apna login PIN daalo</p>
+        <input type="tel" id="loginPinInput" class="login-input" placeholder="PIN" maxlength="6" inputmode="numeric" autocomplete="current-password" onkeydown="if(event.key==='Enter')submitLoginPin()">
+        <div class="login-error" id="loginPinErr"></div>
+        <button type="button" class="login-btn" id="loginPinBtn" onclick="submitLoginPin()">Login →</button>
+      </div>
+
+      <!-- View 2a: User Register Step 1 -->
+      <div id="loginRegStep1" style="display:none">
+        <button type="button" class="login-back-btn" onclick="switchToLogin()">‹ Back</button>
+        <h3 class="login-title">Create Account</h3>
+        <p class="login-sub">Apni basic details daalo</p>
+        <input type="text" id="regName" class="login-input" placeholder="Aapka Poora Naam" maxlength="50" autocomplete="name">
+        <div class="login-phone-row">
+          <div class="login-prefix">🇮🇳 +91</div>
+          <input type="tel" id="regPhone" class="login-input phone-flex" placeholder="Mobile Number" maxlength="10" inputmode="numeric">
+        </div>
+        <input type="email" id="regEmail" class="login-input" placeholder="Email Address (optional)" autocomplete="email">
+        <div class="login-error" id="regErr1"></div>
+        <button type="button" class="login-btn" onclick="submitRegStep1()">Aage Bado →</button>
+      </div>
+
+      <!-- View 2b: User Register Step 2 -->
+      <div id="loginRegStep2" style="display:none">
+        <button type="button" class="login-back-btn" onclick="backToRegStep1()">‹ Back</button>
+        <h3 class="login-title">📍 Aapka Pata</h3>
+        <p class="login-sub">Technician aapke ghar aayega — address chahiye</p>
+        <input type="text" id="regAddress" class="login-input" placeholder="Ghar ka Address" maxlength="200" autocomplete="street-address">
+        <input type="text" id="regCity" class="login-input" placeholder="City / Shehar" maxlength="50" autocomplete="address-level2">
+        <div class="login-phone-row" style="gap:8px">
+          <input type="tel" id="regPincode" class="login-input" placeholder="6-digit Pincode" maxlength="6" inputmode="numeric" autocomplete="postal-code">
+        </div>
+        <div class="login-error" id="regErr2"></div>
+        <button type="button" class="login-btn" onclick="submitRegStep2()">Aage Bado →</button>
+      </div>
+
+      <!-- View 2c: User Register Step 3 — Generate Login PIN -->
+      <div id="loginRegStep3" style="display:none">
+        <button type="button" class="login-back-btn" onclick="backToRegStep2()">‹ Back</button>
+        <h3 class="login-title">🔐 Apna Login PIN Banao</h3>
+        <p class="login-sub">4-digit PIN set karo — agli baar phone number aur is PIN se login karoge. Account safe rahega.</p>
+        <input type="tel" id="regPin" class="login-input" placeholder="4-digit PIN banao" maxlength="4" inputmode="numeric" autocomplete="new-password">
+        <input type="tel" id="regPinConfirm" class="login-input" placeholder="PIN dobara daalo" maxlength="4" inputmode="numeric" autocomplete="new-password">
+        <div class="login-error" id="regErr3"></div>
+        <button type="button" class="login-btn" onclick="submitRegStep3()">✓ Register Karo</button>
+      </div>
+
+      <!-- View 4: ABD placeholder — actual signup opens separate modal -->
+      <div id="abdRegView" style="display:none"></div>
+
+      <!-- View 3: Technician inline reg (fallback, hidden) -->
+      <div id="loginTechRegView" style="display:none">
+        <button type="button" class="login-back-btn" onclick="switchToLogin()">‹ Back</button>
+        <h3 class="login-title">Technician Register</h3>
+        <p class="login-sub">Apni professional details daalo</p>
+        <input type="text" id="ltr-name" class="login-input" placeholder="Poora Naam *" maxlength="60">
+        <div class="login-phone-row">
+          <div class="login-prefix">🇮🇳 +91</div>
+          <input type="tel" id="ltr-phone" class="login-input phone-flex" placeholder="Mobile Number *" maxlength="10" inputmode="numeric">
+        </div>
+        <input type="email" id="ltr-email" class="login-input" placeholder="Email Address (optional)">
+        <input type="text" id="ltr-city" class="login-input" placeholder="Shehar / Area *" maxlength="60">
+        <input type="tel" id="ltr-pin" class="login-input" placeholder="Pincode *" maxlength="6" inputmode="numeric">
+        <select id="ltr-exp" class="ltr-select">
+          <option value="">Experience Chuno *</option>
+          <option>1 saal se kam</option><option>1–2 saal</option>
+          <option>3–5 saal</option><option>5–7 saal</option><option>7+ saal</option>
+        </select>
+        <div class="ltr-section">Skills * (choose karo)</div>
+        <div class="ltr-skills">
+          <label class="ltr-skill-chip"><input type="checkbox" name="ltr-skill" value="AC"> ❄️ AC</label>
+          <label class="ltr-skill-chip"><input type="checkbox" name="ltr-skill" value="Fridge"> 🧊 Fridge</label>
+          <label class="ltr-skill-chip"><input type="checkbox" name="ltr-skill" value="WM"> 🫧 Washing Machine</label>
+          <label class="ltr-skill-chip"><input type="checkbox" name="ltr-skill" value="TV"> 📺 TV</label>
+          <label class="ltr-skill-chip"><input type="checkbox" name="ltr-skill" value="RO"> 💧 RO</label>
+          <label class="ltr-skill-chip"><input type="checkbox" name="ltr-skill" value="Geyser"> 🚿 Geyser</label>
+          <label class="ltr-skill-chip"><input type="checkbox" name="ltr-skill" value="Microwave"> 🍳 Microwave</label>
+          <label class="ltr-skill-chip"><input type="checkbox" name="ltr-skill" value="Chimney"> 🌬️ Chimney</label>
+        </div>
+        <div class="login-error" id="ltrErr"></div>
+        <button type="button" class="login-btn" onclick="submitTechReg()">✓ Register Karo</button>
+      </div>
+
+    </div><!-- /login-body -->
+  </div>
+</div>
+
+<!-- ══ MOBILE DRAWER ══ -->
+<div id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Site menu">
+  <div class="md-panel">
+    <div class="md-header">
+      <a href="#" class="md-logo">Kw<em>i</em>kar.in</a>
+      <button type="button" class="md-close" id="mdClose" aria-label="Close menu">✕</button>
+    </div>
+    <a href="#countdown" class="md-link">🚀 Launch Kab Hai</a>
+    <a href="#services" class="md-link">🛠️ Services</a>
+    <div class="md-cta">
+      <a href="#technician" class="btn btn-primary">Technician Bano</a>
+    </div>
+  </div>
+</div>
+
+<!-- ══ LIVE TICKER ══ -->
+<div class="live-ticker" id="liveTicker">
+  <div class="ticker-inner" id="tickerInner">
+    <span class="ticker-card">Mumbai mein Raj ne AC ki service karaayi</span>
+    <span class="ticker-card">Delhi mein Priya ne Fridge ki service karaayi</span>
+    <span class="ticker-card">Bengaluru mein Amit ne Washing Machine ki service karaayi</span>
+  </div>
+</div>
+
+<!-- ══ HERO CAROUSEL ══ -->
+<div class="hero-carousel" id="heroCarousel">
+  <div class="carousel-track" id="carouselTrack">
+
+    <div class="carousel-slide active">
+      <img src="images/ac2.jpeg" alt="AC Repair" loading="eager">
+      <div class="slide-overlay"></div>
+      <div class="slide-content">
+        <div class="slide-tag"><div class="dot"></div> India mein aa raha hai — 26 May 2026</div>
+        <h1 class="slide-h1">Ghar Ki Repair,<br><em>Sahi Tarike Se.</em><br>Aapke Darwaze Par.</h1>
+        <p class="slide-p">Kwikar laata hai certified AC technicians aapke ghar tak. Fast, transparent aur 50,000+ ghar karte hain trust.</p>
+        <div class="slide-actions">
+          <a href="#pincode" class="btn btn-white btn-lg">Apna Pincode Check Karo</a>
+          <a href="#technician" class="btn btn-lg" style="background:rgba(255,255,255,.15);color:#fff;border:2px solid rgba(255,255,255,.35)">Tech Banonician</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 2: Promo Video -->
+    <div class="carousel-slide carousel-slide--video" id="videoSlide">
+      <video class="slide-video" id="heroVideo" src="videos/kwikar-promo.mp4"
+        playsinline muted preload="metadata"></video>
+
+      <!-- Big play overlay — shown before user taps -->
+      <div class="svp-overlay" id="svpOverlay" onclick="heroVideoStart()">
+        <div class="svp-play-btn">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        </div>
+        <div class="svp-label">Watch Our Story</div>
+      </div>
+
+      <!-- Corner controls — shown while playing -->
+      <div class="svp-controls" id="svpControls" style="display:none">
+        <button class="svp-ctrl-btn" id="svpMuteBtn" onclick="heroVideoMuteToggle()" title="Mute / Unmute">
+          <svg id="svpUnmuteIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+          <svg id="svpMutedIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" style="display:none"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+        </button>
+        <button class="svp-ctrl-btn" onclick="heroVideoPause()" title="Pause">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="carousel-slide">
+      <img src="images/fridge2.jpeg" alt="Refrigerator Repair" loading="lazy">
+      <div class="slide-overlay"></div>
+      <div class="slide-content">
+        <div class="slide-tag"><div class="dot"></div> India Launch — 26 May 2026</div>
+        <h1 class="slide-h1">Fridge Thanda Nahi Kar Raha?<br><em>Hum Fix Kar Denge.</em></h1>
+        <p class="slide-p">Ghar par expert fridge repair. Gas refill, compressor, thermostat — sab kuch 30-day warranty ke saath covered hai.</p>
+        <div class="slide-actions">
+          <a href="#pincode" class="btn btn-white btn-lg">Apna Pincode Check Karo</a>
+          <a href="#services" class="btn btn-lg" style="background:rgba(255,255,255,.15);color:#fff;border:2px solid rgba(255,255,255,.35)">Services Dekho</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-slide">
+      <img src="images/wm2.jpeg" alt="Washing Machine Repair" loading="lazy">
+      <div class="slide-overlay"></div>
+      <div class="slide-content">
+        <div class="slide-tag"><div class="dot"></div> Abhi Register Karo — 20% OFF Milega</div>
+        <h1 class="slide-h1">Har Appliance,<br><em>Expert Se Fix.</em><br>Aapke Paas.</h1>
+        <p class="slide-p">Washing machine, RO, geyser, TV — hamare verified technicians sab handle karte hain. India mein pehle bano!</p>
+        <div class="slide-actions">
+          <a href="#pincode" class="btn btn-white btn-lg">Waitlist Join Karo</a>
+          <a href="#countdown" class="btn btn-lg" style="background:rgba(255,255,255,.15);color:#fff;border:2px solid rgba(255,255,255,.35)">Countdown Dekho</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="carousel-dots">
+    <button type="button" class="dot-btn active" onclick="goSlide(0)"></button>
+    <button type="button" class="dot-btn" onclick="goSlide(1)"></button>
+    <button type="button" class="dot-btn" onclick="goSlide(2)"></button>
+    <button type="button" class="dot-btn" onclick="goSlide(3)"></button>
+  </div>
+  <div class="carousel-arrows">
+    <button type="button" class="carr-btn" onclick="prevSlide()">&#8592;</button>
+    <button type="button" class="carr-btn" onclick="nextSlide()">&#8594;</button>
+  </div>
+  <div class="scroll-hint">SCROLL <span></span></div>
+</div>
+
+<!-- ══ SEARCH + INSTA BAR ══ -->
+<div class="search-insta-row">
+  <div class="site-search-wrap site-search-small" onclick="openSearch()">
+    <div class="site-search-inner">
+      <svg class="site-search-ico-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <div class="search-anim-wrap">
+        <span class="search-anim-text" id="searchAnimText">AC Repair</span>
+      </div>
+    </div>
+  </div>
+  <a class="insta-pill" href="https://www.instagram.com/kwikar.in?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==/" id="kwikar.in" target="_blank" rel="noopener">
+    <svg class="insta-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="url(#igGrad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <defs><linearGradient id="igGrad" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stop-color="#f09433"/><stop offset="25%" stop-color="#e6683c"/><stop offset="50%" stop-color="#dc2743"/><stop offset="75%" stop-color="#cc2366"/><stop offset="100%" stop-color="#bc1888"/></linearGradient></defs>
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#dc2743" stroke="none"/>
+    </svg>
+    <div class="insta-text-wrap">
+      <span class="insta-anim-text" id="instaAnimText">Jin logon ne humpar bhrosa kiya</span>
+    </div>
+  </a>
+</div>
+
+<!-- ══ PROFILE SHEET ══ -->
+<div class="prof-overlay" id="profOverlay" onclick="if(event.target===this)closeProfModal()">
+  <div class="prof-sheet">
+    <div class="prof-handle"></div>
+
+    <!-- User identity row — clickable to open edit -->
+    <button class="prof-user-row" onclick="openProfileEdit()">
+      <div class="prof-avatar">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="8" r="4" fill="#fff" fill-opacity=".9"/>
+          <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" fill="#fff" fill-opacity=".9"/>
+        </svg>
+      </div>
+      <div class="prof-user-info">
+        <div class="prof-name" id="profName"></div>
+        <div class="prof-phone" id="profPhone"></div>
+        <div class="prof-address" id="profAddress"></div>
+      </div>
+      <svg class="prof-edit-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+    </button>
+
+    <div class="prof-user-row-divider"></div>
+    <!-- Menu items -->
+    <nav class="prof-menu">
+      <button class="prof-menu-item" onclick="closeProfModal();openBookingsModal()">
+        <div class="prof-menu-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="5" y="2" width="14" height="20" rx="2"/><line x1="9" y1="7" x2="15" y2="7"/><line x1="9" y1="11" x2="15" y2="11"/><line x1="9" y1="15" x2="13" y2="15"/>
+          </svg>
+        </div>
+        <div class="prof-menu-text">
+          <span class="prof-menu-label">My Bookings</span>
+          <span class="prof-menu-sub">View all your service bookings</span>
+        </div>
+        <svg class="prof-menu-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+
+      <button class="prof-menu-item prof-logout" onclick="logoutUser()">
+        <div class="prof-menu-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/>
+          </svg>
+        </div>
+        <div class="prof-menu-text">
+          <span class="prof-menu-label">Sign Out</span>
+          <span class="prof-menu-sub">Log out of your account</span>
+        </div>
+      </button>
+    </nav>
+  </div>
+</div>
+
+<!-- ══ PROFILE EDIT POPUP ══ -->
+<div class="prof-edit-overlay" id="profEditOverlay" onclick="if(event.target===this)closeProfEdit()">
+  <div class="prof-edit-box">
+    <div class="prof-edit-header">
+      <span class="prof-edit-title">Edit Profile</span>
+      <button class="prof-edit-close" onclick="closeProfEdit()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+
+    <div class="prof-edit-body">
+      <div class="prof-edit-field prof-edit-readonly">
+        <label>Name</label>
+        <div class="prof-edit-value" id="peNameVal"></div>
+      </div>
+      <div class="prof-edit-field prof-edit-readonly">
+        <label>Mobile</label>
+        <div class="prof-edit-value" id="pePhoneVal"></div>
+      </div>
+
+      <div class="prof-edit-divider"></div>
+      <p class="prof-edit-hint">Update your service address</p>
+
+      <div class="prof-edit-field">
+        <label>Full Address</label>
+        <textarea class="prof-edit-input prof-edit-textarea" id="peAddress" placeholder="House no., street, locality..." rows="2"></textarea>
+      </div>
+      <div class="prof-edit-row">
+        <div class="prof-edit-field">
+          <label>City</label>
+          <input class="prof-edit-input" type="text" id="peCity" placeholder="City / Area">
+        </div>
+        <div class="prof-edit-field">
+          <label>Pincode</label>
+          <input class="prof-edit-input" type="tel" id="pePincode" maxlength="6" inputmode="numeric" placeholder="6-digit">
+        </div>
+      </div>
+    </div>
+
+    <div class="prof-edit-err" id="peErr"></div>
+    <button class="prof-edit-btn" id="peSaveBtn" onclick="saveProfileAddress()">Save Changes</button>
+  </div>
+</div>
+
+<!-- ══ MY BOOKINGS SHEET ══ -->
+<div class="bookings-overlay" id="bookingsOverlay" onclick="if(event.target===this)closeBookingsModal()">
+  <div class="bookings-sheet">
+    <div class="bookings-header">
+      <div>
+        <div class="bookings-title">My Bookings</div>
+        <div class="bookings-subtitle">Your service history</div>
+      </div>
+      <button type="button" class="bookings-close" onclick="closeBookingsModal()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="bookings-list" id="bookingsList"><div class="bookings-empty">Loading...</div></div>
+  </div>
+</div>
+
+<!-- ══ BOOKING DETAIL POPUP ══ -->
+<div class="bk-detail-overlay" id="bkDetailOverlay" onclick="if(event.target===this)closeBkDetail()">
+  <div class="bk-detail-box">
+    <button type="button" class="bk-detail-close" onclick="closeBkDetail()">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div id="bkDetailContent"></div>
+  </div>
+</div>
+
+<!-- ══ SEARCH OVERLAY ══ -->
+<div class="srch-overlay" id="srchOverlay" onclick="if(event.target===this)closeSearch()">
+  <div class="srch-box">
+    <div class="srch-header">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" id="srchInput" class="srch-input" placeholder="Search" oninput="filterSearch(this.value)" autofocus>
+      <button class="srch-close" onclick="closeSearch()">✕</button>
+    </div>
+    <div class="srch-results" id="srchResults"></div>
+  </div>
+</div>
+
+<!-- ══ SERVICES NEW (Kya Chahiye Aapko?) ══ -->
+<section class="services-new-sec" id="services">
+  <div class="text-c">
+    <h2 class="sec-h">Kya Chahiye Aapko?</h2>
+    <p class="sec-p">Apna appliance select karo aur turant service book karo.</p>
+  </div>
+  <div class="services-new-grid">
+    <!-- 1. AC -->
+    <div class="svc-card-new reveal" onclick="bookService('ac')">
+      <div class="svc-img-new">
+        <img src="images/ac-repair.png" alt="AC Repair" loading="lazy">
+      </div>
+      <div class="svc-body-new">
+        <div class="svc-name-new">AC Repair</div>
+        <div class="svc-time-badge"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>60 mins</div>
+      </div>
+    </div>
+    <!-- 2. Refrigerator -->
+    <div class="svc-card-new reveal" onclick="bookService('fridge')">
+      <div class="svc-img-new">
+        <img src="images/fridge-repair.png" alt="Refrigerator" loading="lazy">
+      </div>
+      <div class="svc-body-new">
+        <div class="svc-name-new">Refrigerator</div>
+        <div class="svc-time-badge"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>60 mins</div>
+      </div>
+    </div>
+    <!-- 3. Washing Machine -->
+    <div class="svc-card-new reveal" onclick="bookService('washing')">
+      <div class="svc-img-new">
+        <img src="images/wm-repair.png" alt="Washing Machine" loading="lazy">
+      </div>
+      <div class="svc-body-new">
+        <div class="svc-name-new">Washing Machine</div>
+        <div class="svc-time-badge"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>60 mins</div>
+      </div>
+    </div>
+    <!-- 4. TV -->
+    <div class="svc-card-new reveal" onclick="bookService('tv')">
+      <div class="svc-img-new">
+        <img src="images/tv-repair.png" alt="TV Repair" loading="lazy">
+      </div>
+      <div class="svc-body-new">
+        <div class="svc-name-new">Television</div>
+        <div class="svc-time-badge"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>60 mins</div>
+      </div>
+    </div>
+    <!-- 5. RO -->
+    <div class="svc-card-new reveal" onclick="bookService('ro')">
+      <div class="svc-img-new">
+        <img src="images/ro-repair.png" alt="RO Purifier" loading="lazy">
+      </div>
+      <div class="svc-body-new">
+        <div class="svc-name-new">RO Purifier</div>
+        <div class="svc-time-badge"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>60 mins</div>
+      </div>
+    </div>
+    <!-- 6. Geyser -->
+    <div class="svc-card-new reveal" onclick="bookService('geyser')">
+      <div class="svc-img-new">
+        <img src="images/geyser-repair.png" alt="Geyser" loading="lazy">
+      </div>
+      <div class="svc-body-new">
+        <div class="svc-name-new">Geyser</div>
+        <div class="svc-time-badge"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>60 mins</div>
+      </div>
+    </div>
+    <!-- 7. Microwave -->
+    <div class="svc-card-new reveal" onclick="bookService('microwave')">
+      <div class="svc-img-new">
+        <img src="images/microwave-repair.png" alt="Microwave" loading="lazy">
+      </div>
+      <div class="svc-body-new">
+        <div class="svc-name-new">Microwave</div>
+        <div class="svc-time-badge"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>60 mins</div>
+      </div>
+    </div>
+    <!-- 8. Others -->
+    <div class="svc-card-new reveal" onclick="bookService('other')">
+      <div class="svc-img-new" style="display:flex;align-items:center;justify-content:center;">
+        <svg style="width:64px;height:64px;color:#3b82f6;opacity:.7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+      </div>
+      <div class="svc-body-new">
+        <div class="svc-name-new">Others</div>
+        <div class="svc-time-badge"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>60 mins</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ JOIN AS TECHNICIAN BAND ══ -->
+<div class="join-tech-band">
+  <div class="join-tech-badge">Kwikar Ke Saath Kaam Karo</div>
+  <h2 class="join-tech-h">Apko kam karna ata hai,<br>Hamein client dhundhna!</h2>
+  <p class="join-tech-p">Aao sath me Kam karein</p>
+  <div class="join-tech-bottom">
+    <button type="button" class="join-tech-btn" onclick="openTechSignup()">Join as Technician →</button>
+    <div class="join-tech-img">
+      <img src="images/technician.png" alt="Technician" onerror="this.src='images/tech-thumbsup.png'">
+    </div>
+  </div>
+</div>
+
+<!-- ══ STATS ══ -->
+<div class="stats-strip">
+  <div class="stat-i"><span class="stat-n">50K+</span><div class="stat-l">Khush Customers</div></div>
+  <div class="stat-i"><span class="stat-n">200+</span><div class="stat-l">Verified Technicians</div></div>
+  <div class="stat-i"><span class="stat-n">4.8 ★</span><div class="stat-l">App Rating</div></div>
+  <div class="stat-i"><span class="stat-n">2 Hr</span><div class="stat-l">Avg Response Time</div></div>
+  <div class="stat-i"><span class="stat-n">30 Day</span><div class="stat-l">Repair Warranty</div></div>
+</div>
+
+
+<!-- ══ BRANDS WE SERVICE ══ -->
+<section class="brands-sec" id="brands">
+  <div class="text-c">
+    <div class="brands-label">Har Brand Covered</div>
+    <h2 class="brands-h">In Sabhi Brands Ke Appliances Ki Service Hum Karte Hain</h2>
+    <p class="sec-p" style="margin-top:6px">Samsung se Onida tak — India ke sabhi top brands covered hain.</p>
+  </div>
+  <div class="brand-ticker-wrap">
+    <div class="brand-ticker-row">
+      <div class="brand-ticker-track brand-rtl">
+        <span class="brand-pill brand-pill-logo"><img class="bpi-img bpi-wordmark bpi-samsung" src="images/brands/samsung.svg" alt="Samsung logo" onerror="bpiErr(this,'#1428a0','S')"></span>
+        <span class="brand-pill brand-pill-logo"><img class="bpi-img bpi-wordmark bpi-lg" src="https://upload.wikimedia.org/wikipedia/commons/8/8d/LG_logo_%282014%29.svg" alt="LG logo" onerror="bpiErr(this,'#a50034','L')"></span>
+        <span class="brand-pill brand-pill-logo"><img class="bpi-img bpi-wordmark bpi-whirlpool" src="https://upload.wikimedia.org/wikipedia/commons/9/95/Whirlpool_Corporation_Logo_%28as_of_2017%29.svg" alt="Whirlpool logo" onerror="bpiErr(this,'#003087','W')"></span>
+        <span class="brand-pill brand-pill-logo"><img class="bpi-img bpi-wordmark bpi-daikin" src="https://commons.wikimedia.org/wiki/Special:FilePath/DAIKIN_logo.svg" alt="Daikin logo" onerror="bpiErr(this,'#0082cb','D')"></span>
+        <span class="brand-pill brand-pill-logo"><img class="bpi-img bpi-wordmark bpi-haier" src="https://commons.wikimedia.org/wiki/Special:FilePath/Haier_logo.svg" alt="Haier logo" onerror="bpiErr(this,'#0066b2','H')"></span>
+        <span class="brand-pill brand-pill-logo"><img class="bpi-img bpi-wordmark bpi-voltas" src="https://commons.wikimedia.org/wiki/Special:FilePath/Voltas_logo.png" alt="Voltas logo" onerror="bpiErr(this,'#0082cb','V')"></span>
+        <span class="brand-pill brand-pill-logo"><img class="bpi-img bpi-wordmark bpi-panasonic" src="https://commons.wikimedia.org/wiki/Special:FilePath/Panasonic_logo.svg" alt="Panasonic logo" onerror="bpiErr(this,'#003087','P')"></span>
+        <span class="brand-pill brand-pill-logo"><img class="bpi-img bpi-wordmark bpi-sony" src="https://commons.wikimedia.org/wiki/Special:FilePath/Sony_logo.svg" alt="Sony logo" onerror="bpiErr(this,'#1a1a1a','S')"></span>
+        <span class="brand-pill brand-pill-logo"><img class="bpi-img bpi-wordmark bpi-blue-star" src="https://en.wikipedia.org/wiki/Special:FilePath/Blue_Star_(company).svg" alt="Blue Star logo" onerror="bpiErr(this,'#0066b2','B')"></span>
+        <span class="brand-pill brand-pill-logo"><img class="bpi-img bpi-wordmark bpi-carrier" src="https://commons.wikimedia.org/wiki/Special:FilePath/Logo_of_the_Carrier_Corporation.svg" alt="Carrier logo" onerror="bpiErr(this,'#1d4ed8','C')"></span>
+        <span class="brand-pill brand-pill-logo"><img class="bpi-img bpi-wordmark bpi-godrej" src="https://commons.wikimedia.org/wiki/Special:FilePath/Godrej_Logo.svg" alt="Godrej logo" onerror="bpiErr(this,'#6aaa37','G')"></span>
+        <span class="brand-pill brand-pill-logo"><img class="bpi-img bpi-wordmark bpi-ifb" src="https://commons.wikimedia.org/wiki/Special:FilePath/IFB.png" alt="IFB logo" onerror="bpiErr(this,'#555555','I')"></span>
+        <span class="brand-pill brand-pill-logo"><img class="bpi-img bpi-wordmark bpi-general" src="images/brands/general.svg" alt="General logo" onerror="bpiErr(this,'#e60026','G')"></span>
+        <span class="brand-pill brand-pill-logo"><img class="bpi-img bpi-wordmark bpi-hitachi" src="https://commons.wikimedia.org/wiki/Special:FilePath/Hitachi_logo.svg" alt="Hitachi logo" onerror="bpiErr(this,'#1a1a1a','H')"></span>
+        <span class="brand-pill brand-pill-logo"><img class="bpi-img bpi-wordmark bpi-samsung" src="images/brands/samsung.svg" alt="Samsung logo" onerror="bpiErr(this,'#1428a0','S')"></span>
+        <span class="brand-pill brand-pill-logo"><img class="bpi-img bpi-wordmark bpi-lg" src="https://upload.wikimedia.org/wikipedia/commons/8/8d/LG_logo_%282014%29.svg" alt="LG logo" onerror="bpiErr(this,'#a50034','L')"></span>
+        <span class="brand-pill brand-pill-logo"><img class="bpi-img bpi-wordmark bpi-whirlpool" src="https://upload.wikimedia.org/wikipedia/commons/9/95/Whirlpool_Corporation_Logo_%28as_of_2017%29.svg" alt="Whirlpool logo" onerror="bpiErr(this,'#003087','W')"></span>
+        <span class="brand-pill brand-pill-logo"><img class="bpi-img bpi-wordmark bpi-daikin" src="https://commons.wikimedia.org/wiki/Special:FilePath/DAIKIN_logo.svg" alt="Daikin logo" onerror="bpiErr(this,'#0082cb','D')"></span>
+        <span class="brand-pill brand-pill-logo"><img class="bpi-img bpi-wordmark bpi-haier" src="https://commons.wikimedia.org/wiki/Special:FilePath/Haier_logo.svg" alt="Haier logo" onerror="bpiErr(this,'#0066b2','H')"></span>
+        <span class="brand-pill brand-pill-logo"><img class="bpi-img bpi-wordmark bpi-voltas" src="https://commons.wikimedia.org/wiki/Special:FilePath/Voltas_logo.png" alt="Voltas logo" onerror="bpiErr(this,'#0082cb','V')"></span>
+        <span class="brand-pill brand-pill-logo"><img class="bpi-img bpi-wordmark bpi-panasonic" src="https://commons.wikimedia.org/wiki/Special:FilePath/Panasonic_logo.svg" alt="Panasonic logo" onerror="bpiErr(this,'#003087','P')"></span>
+        <span class="brand-pill brand-pill-logo"><img class="bpi-img bpi-wordmark bpi-sony" src="https://commons.wikimedia.org/wiki/Special:FilePath/Sony_logo.svg" alt="Sony logo" onerror="bpiErr(this,'#1a1a1a','S')"></span>
+        <span class="brand-pill brand-pill-logo"><img class="bpi-img bpi-wordmark bpi-blue-star" src="https://en.wikipedia.org/wiki/Special:FilePath/Blue_Star_(company).svg" alt="Blue Star logo" onerror="bpiErr(this,'#0066b2','B')"></span>
+        <span class="brand-pill brand-pill-logo"><img class="bpi-img bpi-wordmark bpi-carrier" src="https://commons.wikimedia.org/wiki/Special:FilePath/Logo_of_the_Carrier_Corporation.svg" alt="Carrier logo" onerror="bpiErr(this,'#1d4ed8','C')"></span>
+        <span class="brand-pill brand-pill-logo"><img class="bpi-img bpi-wordmark bpi-godrej" src="https://commons.wikimedia.org/wiki/Special:FilePath/Godrej_Logo.svg" alt="Godrej logo" onerror="bpiErr(this,'#6aaa37','G')"></span>
+        <span class="brand-pill brand-pill-logo"><img class="bpi-img bpi-wordmark bpi-ifb" src="https://commons.wikimedia.org/wiki/Special:FilePath/IFB.png" alt="IFB logo" onerror="bpiErr(this,'#555555','I')"></span>
+        <span class="brand-pill brand-pill-logo"><img class="bpi-img bpi-wordmark bpi-general" src="images/brands/general.svg" alt="General logo" onerror="bpiErr(this,'#e60026','G')"></span>
+        <span class="brand-pill brand-pill-logo"><img class="bpi-img bpi-wordmark bpi-hitachi" src="https://commons.wikimedia.org/wiki/Special:FilePath/Hitachi_logo.svg" alt="Hitachi logo" onerror="bpiErr(this,'#1a1a1a','H')"></span>
+      </div>
+    </div>
+    <div class="brand-ticker-row">
+      <div class="brand-ticker-track brand-ltr">
+        <span class="brand-pill brand-pill-logo"><img class="bpi-img bpi-wordmark bpi-bosch" src="https://commons.wikimedia.org/wiki/Special:FilePath/Bosch-logo.svg" alt="Bosch logo" onerror="bpiErr(this,'#e20015','B')"></span>
+        <span class="brand-pill brand-pill-logo"><img class="bpi-img bpi-wordmark bpi-lloyd" src="images/brands/lloyd.svg" alt="Lloyd logo" onerror="bpiErr(this,'#003087','L')"></span>
+        <span class="brand-pill brand-pill-logo"><img class="bpi-img bpi-wordmark bpi-bajaj" src="https://commons.wikimedia.org/wiki/Special:FilePath/Bajaj_Auto_logo.svg" alt="Bajaj logo" onerror="bpiErr(this,'#005baa','B')"></span>
+        <span class="brand-pill brand-pill-logo"><img class="bpi-img bpi-wordmark bpi-havells" src="https://commons.wikimedia.org/wiki/Special:FilePath/Havells_Logo.svg" alt="Havells logo" onerror="bpiErr(this,'#e20015','H')"></span>
+        <span class="brand-pill brand-pill-logo"><img class="bpi-img bpi-wordmark bpi-sharp" src="https://commons.wikimedia.org/wiki/Special:FilePath/Sharp_logo.svg" alt="Sharp logo" onerror="bpiErr(this,'#e60012','S')"></span>
+        <span class="brand-pill brand-pill-logo"><img class="bpi-img bpi-wordmark bpi-toshiba" src="https://commons.wikimedia.org/wiki/Special:FilePath/Toshiba_logo.svg" alt="Toshiba logo" onerror="bpiErr(this,'#e60012','T')"></span>
+        <span class="brand-pill brand-pill-logo"><img class="bpi-img bpi-wordmark bpi-mitsubishi" src="https://commons.wikimedia.org/wiki/Special:FilePath/Mitsubishi_Electric_logo.svg" alt="Mitsubishi Electric logo" onerror="bpiErr(this,'#e60012','M')"></span>
+        <span class="brand-pill brand-pill-logo"><img class="bpi-img bpi-wordmark bpi-electrolux" src="https://commons.wikimedia.org/wiki/Special:FilePath/Electrolux_2015.svg" alt="Electrolux logo" onerror="bpiErr(this,'#011e41','E')"></span>
+        <span class="brand-pill brand-pill-logo"><img class="bpi-img bpi-wordmark bpi-midea" src="https://en.wikipedia.org/wiki/Special:FilePath/Midea.svg" alt="Midea logo" onerror="bpiErr(this,'#009fe3','M')"></span>
+        <span class="brand-pill brand-pill-logo"><img class="bpi-img bpi-wordmark bpi-ao-smith" src="https://commons.wikimedia.org/wiki/Special:FilePath/AO_Smith_logo.svg" alt="AO Smith logo" onerror="bpiErr(this,'#007a3d','A')"></span>
+        <span class="brand-pill brand-pill-logo"><img class="bpi-img bpi-wordmark bpi-kent" src="images/brands/kent.svg" alt="Kent logo" onerror="bpiErr(this,'#1e3a8a','K')"></span>
+        <span class="brand-pill brand-pill-logo"><img class="bpi-img bpi-wordmark bpi-eureka" src="https://en.wikipedia.org/wiki/Special:FilePath/Eureka_Forbes.svg" alt="Eureka Forbes logo" onerror="bpiErr(this,'#0b4ea2','E')"></span>
+        <span class="brand-pill brand-pill-logo"><img class="bpi-img bpi-wordmark bpi-videocon" src="https://commons.wikimedia.org/wiki/Special:FilePath/Videocon_logo.svg" alt="Videocon logo" onerror="bpiErr(this,'#00a651','V')"></span>
+        <span class="brand-pill brand-pill-logo"><img class="bpi-img bpi-wordmark bpi-onida" src="https://en.wikipedia.org/wiki/Special:FilePath/Onida_Electronics.svg" alt="Onida logo" onerror="bpiErr(this,'#e60012','O')"></span>
+        <span class="brand-pill brand-pill-logo"><img class="bpi-img bpi-wordmark bpi-bosch" src="https://commons.wikimedia.org/wiki/Special:FilePath/Bosch-logo.svg" alt="Bosch logo" onerror="bpiErr(this,'#e20015','B')"></span>
+        <span class="brand-pill brand-pill-logo"><img class="bpi-img bpi-wordmark bpi-lloyd" src="images/brands/lloyd.svg" alt="Lloyd logo" onerror="bpiErr(this,'#003087','L')"></span>
+        <span class="brand-pill brand-pill-logo"><img class="bpi-img bpi-wordmark bpi-bajaj" src="https://commons.wikimedia.org/wiki/Special:FilePath/Bajaj_Auto_logo.svg" alt="Bajaj logo" onerror="bpiErr(this,'#005baa','B')"></span>
+        <span class="brand-pill brand-pill-logo"><img class="bpi-img bpi-wordmark bpi-havells" src="https://commons.wikimedia.org/wiki/Special:FilePath/Havells_Logo.svg" alt="Havells logo" onerror="bpiErr(this,'#e20015','H')"></span>
+        <span class="brand-pill brand-pill-logo"><img class="bpi-img bpi-wordmark bpi-sharp" src="https://commons.wikimedia.org/wiki/Special:FilePath/Sharp_logo.svg" alt="Sharp logo" onerror="bpiErr(this,'#e60012','S')"></span>
+        <span class="brand-pill brand-pill-logo"><img class="bpi-img bpi-wordmark bpi-toshiba" src="https://commons.wikimedia.org/wiki/Special:FilePath/Toshiba_logo.svg" alt="Toshiba logo" onerror="bpiErr(this,'#e60012','T')"></span>
+        <span class="brand-pill brand-pill-logo"><img class="bpi-img bpi-wordmark bpi-mitsubishi" src="https://commons.wikimedia.org/wiki/Special:FilePath/Mitsubishi_Electric_logo.svg" alt="Mitsubishi Electric logo" onerror="bpiErr(this,'#e60012','M')"></span>
+        <span class="brand-pill brand-pill-logo"><img class="bpi-img bpi-wordmark bpi-electrolux" src="https://commons.wikimedia.org/wiki/Special:FilePath/Electrolux_2015.svg" alt="Electrolux logo" onerror="bpiErr(this,'#011e41','E')"></span>
+        <span class="brand-pill brand-pill-logo"><img class="bpi-img bpi-wordmark bpi-midea" src="https://en.wikipedia.org/wiki/Special:FilePath/Midea.svg" alt="Midea logo" onerror="bpiErr(this,'#009fe3','M')"></span>
+        <span class="brand-pill brand-pill-logo"><img class="bpi-img bpi-wordmark bpi-ao-smith" src="https://commons.wikimedia.org/wiki/Special:FilePath/AO_Smith_logo.svg" alt="AO Smith logo" onerror="bpiErr(this,'#007a3d','A')"></span>
+        <span class="brand-pill brand-pill-logo"><img class="bpi-img bpi-wordmark bpi-kent" src="images/brands/kent.svg" alt="Kent logo" onerror="bpiErr(this,'#1e3a8a','K')"></span>
+        <span class="brand-pill brand-pill-logo"><img class="bpi-img bpi-wordmark bpi-eureka" src="https://en.wikipedia.org/wiki/Special:FilePath/Eureka_Forbes.svg" alt="Eureka Forbes logo" onerror="bpiErr(this,'#0b4ea2','E')"></span>
+        <span class="brand-pill brand-pill-logo"><img class="bpi-img bpi-wordmark bpi-videocon" src="https://commons.wikimedia.org/wiki/Special:FilePath/Videocon_logo.svg" alt="Videocon logo" onerror="bpiErr(this,'#00a651','V')"></span>
+        <span class="brand-pill brand-pill-logo"><img class="bpi-img bpi-wordmark bpi-onida" src="https://en.wikipedia.org/wiki/Special:FilePath/Onida_Electronics.svg" alt="Onida logo" onerror="bpiErr(this,'#e60012','O')"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TECHNICIAN FORM ══ -->
+<!-- ══ TECHNICIAN MODAL (opens via Abhi Join Karo buttons; not in page flow) ══ -->
+<div class="tech-modal" id="techModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="techModalTitle">
+<div class="tech-modal-panel" role="document">
+<button type="button" class="tech-modal-close" id="techModalClose" aria-label="Close">✕</button>
+<section class="tech-sec" id="technician">
+  <div class="tech-grid">
+    <div class="tech-visual">
+      <img src="https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?w=800&q=85&auto=format&fit=crop" alt="Technician" loading="lazy">
+      <div class="tech-badge"><div class="tb-icon">🛠️</div><div><div class="tb-t1">₹25,000+ / Month</div><div class="tb-t2">Average technician ki kamaai</div></div></div>
+    </div>
+    <div class="tech-form-wrap">
+      <div class="label">Technicians Ke Liye</div>
+      <h2 class="sec-h" id="techModalTitle">Kwikar Mein Join Karo<br>Verified Technician Ki Tarah</h2>
+      <p class="sec-p">Apne schedule par karo kaam, zyada kamao, apni reputation banao. Hum leads denge — aap apni expertise laao.</p>
+      <div id="techFormBox">
+        <div class="form-grid">
+          <div class="form-group"><label>Poora Naam *</label><input type="text" id="tf-name" placeholder="Ravi Kumar"></div>
+          <div class="form-group"><label>Mobile Number *</label><input type="tel" id="tf-phone" placeholder="+91 98765 43210" maxlength="13"></div>
+          <div class="form-group"><label>Email Address</label><input type="email" id="tf-email" placeholder="ravi@email.com"></div>
+          <div class="form-group"><label>Shehar / Area *</label><input type="text" id="tf-city" placeholder="India"></div>
+          <div class="form-group"><label>Pincode *</label><input type="tel" id="tf-pin" placeholder="812001" maxlength="6" inputmode="numeric"></div>
+          <div class="form-group"><label>Kitne Saal Ka Experience *</label><select id="tf-exp"><option value="">Experience Chuno</option><option>1 saal se kam</option><option>1–2 saal</option><option>3–5 saal</option><option>5–7 saal</option><option>7+ saal</option></select></div>
+          <div class="form-group form-full">
+            <label>Skills * (jo bhi hain sab choose karo)</label>
+            <div class="skills-check">
+              <label class="skill-chip"><input type="checkbox" name="skill" value="AC"> ❄️ AC Repair</label>
+              <label class="skill-chip"><input type="checkbox" name="skill" value="Fridge"> 🧊 Refrigerator</label>
+              <label class="skill-chip"><input type="checkbox" name="skill" value="WM"> 🫧 Washing Machine</label>
+              <label class="skill-chip"><input type="checkbox" name="skill" value="TV"> 📺 TV Repair</label>
+              <label class="skill-chip"><input type="checkbox" name="skill" value="RO"> 💧 RO Purifier</label>
+              <label class="skill-chip"><input type="checkbox" name="skill" value="Geyser"> 🚿 Geyser</label>
+              <label class="skill-chip"><input type="checkbox" name="skill" value="Microwave"> 🍳 Microwave</label>
+              <label class="skill-chip"><input type="checkbox" name="skill" value="Chimney"> 🌬️ Chimney</label>
+            </div>
+          </div>
+          <div class="form-group"><label>ID Proof Type</label><select id="tf-id"><option value="">Select ID</option><option>Aadhaar Card</option><option>PAN Card</option><option>Voter ID</option><option>Driving Licence</option></select></div>
+          <div class="form-group"><label>ID Number</label><input type="text" id="tf-idnum" placeholder="XXXX XXXX XXXX"></div>
+          <div class="form-group form-full"><label>Thoda Apne Baare Mein Batao</label><textarea id="tf-about" placeholder="Apna experience thoda detail mein batao..."></textarea></div>
+        </div>
+        <button class="form-submit" onclick="submitTech()">Application Submit Karo 🚀</button>
+      </div>
+      <div class="form-success" id="techSuccess"><div class="fs-icon">🎉</div><h4>Application Submit Ho Gayi!</h4><p>Hamari team 48 ghante mein aapka profile review karke contact karegi. Kwikar family mein welcome!</p></div>
+    </div>
+  </div>
+</section>
+</div>
+</div>
+
+<!-- ══ BOOKING MODAL (multi-step: phone → appliance → issue → success) ══ -->
+<div class="booking-modal" id="bookingModal" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="booking-modal-panel" role="document">
+    <div class="booking-header">
+      <button type="button" class="booking-back" id="bookingBack" aria-label="Back">←</button>
+      <div class="booking-title" id="bookingTitle">Service Book Karo</div>
+      <button type="button" class="booking-close" id="bookingClose" aria-label="Close">✕</button>
+    </div>
+    <div class="booking-body">
+
+      <!-- Step 1: Phone number -->
+      <div class="bk-step active" data-step="phone">
+        <div class="bk-step-icon">📱</div>
+        <h2 class="bk-step-h">Apna Mobile Number Daalo</h2>
+        <p class="bk-step-p">SMS se booking confirmation milegi</p>
+        <input type="tel" class="bk-phone-input" id="bk-phone" placeholder="98765 43210" maxlength="13" inputmode="numeric">
+        <button type="button" class="bk-next-btn" id="bkPhoneNext">Aage Bado →</button>
+      </div>
+
+      <!-- Step 2: Appliance selection -->
+      <div class="bk-step" data-step="appliance">
+        <h2 class="bk-step-h">Kya Fix Karna Hai?</h2>
+        <p class="bk-step-p">Apna appliance select karo</p>
+        <div class="appliance-grid" id="applianceGrid"></div>
+      </div>
+
+      <!-- Step 3: Issue selection -->
+      <div class="bk-step" data-step="issue">
+        <div class="bk-app-hero">
+          <img id="bk-app-img" src="" alt="">
+          <div class="bk-app-name" id="bk-app-name"></div>
+        </div>
+        <h2 class="bk-step-h">Kya Problem Hai?</h2>
+        <p class="bk-step-p">Jo problem aa rahi hai wo select karo</p>
+        <div class="issues-grid" id="issuesGrid"></div>
+        <div class="bk-other-box" id="bkOtherBox">
+          <label for="bk-other-text">Thoda detail mein batao:</label>
+          <textarea id="bk-other-text" placeholder="Apni problem thoda detail mein batao..."></textarea>
+        </div>
+        <button type="button" class="bk-submit-btn" id="bkSubmit">Book Karo 🚀</button>
+      </div>
+
+      <!-- Step 4: Success -->
+      <div class="bk-step" data-step="success">
+        <div class="bk-success-icon">🎉</div>
+        <h2 class="bk-step-h">Booking Ho Gayi!</h2>
+        <p class="bk-step-p">Hamara verified technician 30 minute mein contact karega aur visit schedule karega.</p>
+        <div class="bk-summary" id="bkSummary"></div>
+        <button type="button" class="bk-next-btn" id="bkDoneBtn">Ho Gaya ✓</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ══ APP DOWNLOAD ══ -->
+<section class="app-sec">
+  <div class="app-grid">
+    <div class="app-phones">
+      <div class="aphone aph1"><img src="https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?w=300&q=80&auto=format&fit=crop" alt="App" loading="lazy"></div>
+      <div class="aphone aph2"><img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=300&q=80&auto=format&fit=crop" alt="App" loading="lazy"></div>
+    </div>
+    <div>
+      <div class="label">App Download Karo</div>
+      <h2 class="sec-h">2 Minute Mein Book Karo</h2>
+      <p class="sec-p">Kwikar app se verified technicians ek click mein milenge. iOS & Android par bilkul free download karo.</p>
+      <div class="app-perks">
+        <div class="perk">Real-time technician GPS tracking</div>
+        <div class="perk">Instant booking confirmation milegi</div>
+        <div class="perk">Secure in-app payments</div>
+        <div class="perk">Har kaam par 30-din ki repair warranty</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ JOIN AS ABD BAND ══ -->
+<div class="join-abd-band">
+  <div class="join-abd-badge">Kwikar Ke Saath Area Badhao</div>
+  <h2 class="join-abd-h">Apna Area Sambhaliye,<br>Team Banaiye,<br>Income Badhaiye!</h2>
+  <div class="join-abd-bottom">
+    <button type="button" class="join-abd-btn" onclick="event.stopPropagation();openAbdSignup()">Join as ABD →</button>
+    <div class="join-abd-img">
+      <img src="images/abd.png" alt="ABD" onerror="this.src='images/technician.png'">
+    </div>
+  </div>
+</div>
+
+<!-- ══ ABD MODAL ══ -->
+<div class="abd-modal" id="abdModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="abdModalTitle">
+  <div class="abd-modal-panel" role="document">
+    <button type="button" class="abd-modal-close" id="abdModalClose" aria-label="Close">✕</button>
+    <div class="label" style="color:#e65c00">Area Business Director Ke Liye</div>
+    <h2 class="sec-h" id="abdModalTitle" style="margin-bottom:6px">Kwikar ABD Baniye,<br>Apna Area Sambhaliye</h2>
+    <p class="sec-p">Apne area mein technicians ki team banao, bookings manage karo aur har booking par commission kamaao.</p>
+    <div id="abdFormBox">
+      <div class="form-grid">
+        <div class="form-group"><label>Poora Naam *</label><input type="text" id="abd-name" placeholder="Rahul Sharma"></div>
+        <div class="form-group"><label>Mobile Number *</label><input type="tel" id="abd-phone" placeholder="+91 98765 43210" maxlength="13"></div>
+        <div class="form-group"><label>Email Address</label><input type="email" id="abd-email" placeholder="rahul@email.com"></div>
+        <div class="form-group"><label>Shehar / Area *</label><input type="text" id="abd-city" placeholder="India"></div>
+        <div class="form-group"><label>Pincode *</label><input type="tel" id="abd-pin" placeholder="812001" maxlength="6" inputmode="numeric"></div>
+        <div class="form-group"><label>Abhi Kya Karte Ho *</label><select id="abd-occ"><option value="">Occupation Chuno</option><option>Business Owner</option><option>Salaried Employee</option><option>Freelancer</option><option>Student</option><option>Other</option></select></div>
+        <div class="form-group"><label>ID Proof Type</label><select id="abd-id"><option value="">Select ID</option><option>Aadhaar Card</option><option>PAN Card</option><option>Voter ID</option><option>Driving Licence</option></select></div>
+        <div class="form-group"><label>ID Number</label><input type="text" id="abd-idnum" placeholder="XXXX XXXX XXXX"></div>
+        <div class="form-group form-full"><label>Apne Area Ke Baare Mein Batao *</label><textarea id="abd-about" placeholder="Apna area, technician network, aur experience thoda detail mein batao..."></textarea></div>
+      </div>
+      <button class="form-submit" style="background:#e65c00" onclick="submitAbd()">Application Submit Karo 🚀</button>
+    </div>
+    <div class="form-success" id="abdSuccess" style="display:none"><div class="fs-icon">🎉</div><h4>Application Submit Ho Gayi!</h4><p>Hamari team 48 ghante mein aapka profile review karke contact karegi. Kwikar ABD family mein welcome!</p></div>
+  </div>
+</div>
+
+<!-- ══ CUSTOMER REVIEWS ══ -->
+<section class="testimonials-sec" id="testimonialsSection" style="display:none">
+  <div class="text-c">
+    <div class="brands-label">Verified Reviews</div>
+    <h2 class="brands-h">What Our Customers Say</h2>
+  </div>
+  <div class="testimonials-track-wrap">
+    <div class="testimonials-track" id="testimonialsTrack"></div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="f-bottom footer-compact">
+    <div class="f-logo">Kw<em>i</em>kar</div>
+    <span>© 2026 Starwebx Technologies Pvt. Ltd. | Bhagalpur, Bihar, India</span>
+    <div class="starwebx">Directed by<strong>Tabish Azim</strong></div>
+    <div class="footer-legal-section">
+      <button class="footer-legal-btn" id="legalMenuBtn" onclick="toggleLegalMenu()" type="button">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+        Legal Information
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="footer-legal-dropdown" id="legalMenuDropdown">
+        <a href="privacy-policy"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Privacy Policy</a>
+        <a href="terms-and-conditions"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg> Terms &amp; Conditions</a>
+        <a href="refund-policy"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-3.51"/></svg> Refund &amp; Cancellation</a>
+        <a href="contact-us"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Contact Us</a>
+      </div>
+    </div>
+    <div class="footer-panel-links">
+      <button class="footer-panel-btn footer-panel-btn--abd" onclick="openLoginAs('abd')">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0 1 12 0v2"/></svg>
+        ABD Panel
+      </button>
+      <button class="footer-panel-btn footer-panel-btn--admin" onclick="openLoginAs('admin')">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        Admin Panel
+      </button>
+    </div>
+  </div>
+</footer>
+
+<!-- ══ FLOATING REVIEW WIDGET ══ -->
+<div class="rv-widget" id="rvWidget">
+
+  <!-- Popup panel (hidden by default) -->
+  <div class="rv-panel" id="rvPanel">
+    <!-- Form view -->
+    <div id="rvFormView">
+      <div class="rv-panel-head">
+        <div>
+          <div class="rv-panel-title">Rate Your Experience</div>
+          <div class="rv-panel-sub">Your feedback helps us improve</div>
+        </div>
+        <button class="rv-panel-close" onclick="toggleReviewWidget()">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="rv-stars" id="rvStars">
+        <button class="rv-star" data-v="1" onclick="setReviewRating(1)"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></button>
+        <button class="rv-star" data-v="2" onclick="setReviewRating(2)"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></button>
+        <button class="rv-star" data-v="3" onclick="setReviewRating(3)"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></button>
+        <button class="rv-star" data-v="4" onclick="setReviewRating(4)"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></button>
+        <button class="rv-star" data-v="5" onclick="setReviewRating(5)"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></button>
+      </div>
+      <input  class="rv-input"    type="text" id="rvName" placeholder="Your name (optional)">
+      <textarea class="rv-input rv-textarea" id="rvText" rows="3" placeholder="What do you think about Kwikar?"></textarea>
+      <div class="rv-err" id="rvErr"></div>
+      <button class="rv-submit" id="rvSubmitBtn" onclick="submitReview()">Submit Feedback</button>
+    </div>
+  </div>
+
+  <!-- Success toast (sits above the trigger button) -->
+  <div class="rv-toast" id="rvToast">
+    <div class="rv-toast-icon">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>
+    </div>
+    <div>
+      <div class="rv-toast-title">Thank you!</div>
+      <div class="rv-toast-sub">Feedback submitted</div>
+    </div>
+  </div>
+
+  <!-- Floating trigger button -->
+  <button class="rv-trigger" id="rvTrigger" onclick="toggleReviewWidget()" aria-label="Rate us">
+    <svg class="rv-trigger-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+    <span class="rv-trigger-label">Rate Us</span>
+  </button>
+
+</div>
+
+<script src="script.js?v=20260601d"></script>
+
+</body>
+</html>
